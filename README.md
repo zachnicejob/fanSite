@@ -39,17 +39,17 @@ Endpoints:
 
 Tailwind css
 
-Homepage
-Facts
-Events
-Event 1
-Event 2
-Etc…
-General
-Blog 1
-Blog 2
-Blog 3
-About the creators
+- Homepage
+- Facts
+- Events
+-   Event 1
+-   Event 2
+-   Etc…
+- General
+-   Blog 1
+-   Blog 2
+-   Blog 3
+- About the creators
 
 
 
