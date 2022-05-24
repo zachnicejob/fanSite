@@ -14,12 +14,11 @@ public class PostMapper {
         post.setId(resultSet.getInt("post_id"));
         post.setType(resultSet.getInt("type_id"));
         post.setTitle(resultSet.getString("title"));
-//        post.setPostDate(resultSet.getPostDate("post_date"));
+//        post.setPostDate(resultSet.getDate("post_date"));
 //        //Post.setLastName(resultSet.getString("last_name"));
         if (resultSet.getDate("post_date") != null) {
             post.setPostDate(resultSet.getDate("post_date").toLocalDate());
         }
-        //post.setHeightInInches(resultSet.getInt("height_in_inches"));
         return post;
     }
 }
