@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from  'react-router-dom';
+import GeneralPosts from './components/generalposts/GeneralPosts';
+import GeneralPost from './components/generalposts/GeneralPost';
+import Events from './components/events/Events';
+import Event from './components/events/Event';
+import Homepage from './components/Homepage';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="main">
+        <Switch>
+          <Route path={"/generalPosts/:id"}>
+              <GeneralPost />
+          </Route>
+          <Route path={"/generalPosts"}>
+            <GeneralPosts />
+          </Route>
+          <Route path={"/events/:id"}>
+            <Event />
+          </Route>
+          <Route path={"/events"}>
+            <Events />
+          </Route>
+          <Route exact path={"/"}>
+            <Homepage />
+          </Route>
+          <Route>
+            <NotFound />
+          </Route>
+        </Switch>
+      </div>
     </div>
   );
 }
