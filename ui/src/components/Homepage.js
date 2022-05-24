@@ -1,8 +1,8 @@
 
 function Homepage() {
  return (
-    <p>
-    Homepage
+    <p className="text-3xl font-bold">
+      Hello, Homepage!
     </p>
  )
 }

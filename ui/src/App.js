@@ -5,11 +5,17 @@ import Events from './components/events/Events';
 import Event from './components/events/Event';
 import Homepage from './components/Homepage';
 import NotFound from './components/NotFound';
+import About from './components/About';
+import ChopperBio from './components/ChopperBio';
+import Navbar from './components/Navbar';
+import './components/styles.css';
 
 function App() {
   return (
     <div className="App">
-      <div className="main">
+      <div className="main bg-[#ffe4e6]">
+
+      <Navbar />
         <Switch>
           <Route path={"/generalPosts/:id"}>
               <GeneralPost />
@@ -22,6 +28,12 @@ function App() {
           </Route>
           <Route path={"/events"}>
             <Events />
+          </Route>
+          <Route path={"/chopperBio"}>
+            <ChopperBio />
+          </Route>
+          <Route path={"/about"}>
+            <About />
           </Route>
           <Route exact path={"/"}>
             <Homepage />
