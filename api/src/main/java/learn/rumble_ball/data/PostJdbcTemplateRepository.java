@@ -9,19 +9,23 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class PostJdbcRepository implements PostRepository {
+public class PostJdbcTemplateRepository implements PostRepository {
 
     private final JdbcTemplate jdbcTemplate;
+
+    private final PostMapper rowMapper = new PostMapper();
 
     public PostJdbcTemplateRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
+
+
     @Override
     public List<Post> findAll(){
         final String sql = "select post_id, title, middle_name, last_name, dob, height_in_inches "
                 + "from post limit 1000;";
-        return jdbcTemplate.query(sql, new PostMapper());
+        return jdbcTemplate.query(sql, rowMapper);
 
     }
 
