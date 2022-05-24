@@ -87,7 +87,7 @@ React
 - About the creators
 ```
 
-
+![UI wireframe](ui-wireframe.png)
 
 
 
