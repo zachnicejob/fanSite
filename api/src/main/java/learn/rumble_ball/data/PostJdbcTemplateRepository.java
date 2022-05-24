@@ -21,7 +21,6 @@ public class PostJdbcTemplateRepository implements PostRepository {
     }
 
 
-
     @Override
     public List<Post> findAll(){
         final String sql = "select post_id, type_id, title, post_date "
