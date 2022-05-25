@@ -8,7 +8,15 @@ create table post (
 	title varchar(50) not null,
     date_posted date not null,
     text_body varchar(10000),
-    image_link varchar(200)
+    image_link varchar(200),
+    constraint fk_post_type_id
+		foreign key (type_id)
+        references `type`(type_id)
+);
+
+create table `type` (
+	type_id int primary key auto_increment,
+    `type` varchar(20) not null
 );
 
 
