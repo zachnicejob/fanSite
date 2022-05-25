@@ -23,7 +23,7 @@ public class PostJdbcTemplateRepository implements PostRepository {
 
     @Override
     public List<Post> findAll(){
-        final String sql = "select post_id, type_id, title, post_date "
+        final String sql = "select post_id, type_id, title, post_date, text_body, image_link "
                 + "from post limit 1000;";
         return jdbcTemplate.query(sql, rowMapper);
 
@@ -33,11 +33,11 @@ public class PostJdbcTemplateRepository implements PostRepository {
     @Transactional
     public Object findById(int id){
 
-        final String sql = "select post_id, type_id, title, post_date "
-                + "from post "
-                + "where post_id = ?;";
+        final String sql = "select post_id, type_id, title, post_date, text_body, image_link "
+                + "from post limit 1000 "
+                + "where id = ?;";
 
-        Object post = jdbcTemplate.query(sql, new PostMapper(), id).stream()
+        Object post = jdbcTemplate.query(sql, rowMapper, id).stream()
                 .findFirst().orElse(null);
 
 //        if (post != null) {
