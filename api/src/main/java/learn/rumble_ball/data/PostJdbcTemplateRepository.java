@@ -31,18 +31,18 @@ public class PostJdbcTemplateRepository implements PostRepository {
 
     @Override
     @Transactional
-    public Post findById(int id){
+    public Object findById(int id){
 
         final String sql = "select post_id, type_id, title, post_date "
                 + "from post "
                 + "where post_id = ?;";
 
-        Post post = jdbcTemplate.query(sql, new PostMapper(), id).stream()
+        Object post = jdbcTemplate.query(sql, new PostMapper(), id).stream()
                 .findFirst().orElse(null);
 
-        if (post != null) {
-            addAgencies(post);
-        }
+//        if (post != null) {
+//            addAgencies(post);
+//        }
 
         return post;
     }
