@@ -23,7 +23,7 @@ public class PostController {
     }
 
     @GetMapping
-    public List<Post> findByTypeId(int typeId) {
+    public List<Post> findByTypeId(@PathVariable int typeId) {
         return service.findByTypeId(typeId);
     }
 
