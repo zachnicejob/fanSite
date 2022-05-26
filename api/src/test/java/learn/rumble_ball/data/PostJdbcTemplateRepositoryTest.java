@@ -33,6 +33,12 @@ class PostJdbcTemplateRepositoryTest {
     }
 
     @Test
+    void hasKnownGoodState() {
+
+        assertNotNull(repository);
+    }
+
+    @Test
     void shouldFindAllPosts() {
         Post expected = new Post(1, 1, LocalDate.of(2022,04,25),"First Event!",
                 "This is the first event post", "http://pm1.narvii.com/6162/3b1affdff1083383b3a97256a1cf22caa1e8da8a_00.jpg");
