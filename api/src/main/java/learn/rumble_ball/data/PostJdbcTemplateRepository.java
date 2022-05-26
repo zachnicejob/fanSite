@@ -30,7 +30,7 @@ public class PostJdbcTemplateRepository implements PostRepository {
     }
 
     @Override
-    public List<Post> findByType(int typeId){
+    public List<Post> findByTypeId(int typeId){
         final String sql = "select post_id, type_id, title, post_date, text_body, image_link "
                 + "from post where type_id = ? limit 1000;";
         return jdbcTemplate.query(sql, rowMapper, typeId);

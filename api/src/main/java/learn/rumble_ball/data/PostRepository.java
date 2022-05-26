@@ -9,6 +9,8 @@ public interface PostRepository {
 
     List<Post> findByType(int typeId);
 
+    List<Post> findByTypeId(int typeId);
+
     Post findById(int id);
 
 }
