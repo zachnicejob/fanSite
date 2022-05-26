@@ -40,10 +40,6 @@ public class PostJdbcTemplateRepository implements PostRepository {
         Post post = jdbcTemplate.query(sql, new PostMapper(), id).stream()
                 .findFirst().orElse(null);
 
-        if (post != null) {
-            addAgencies(post);
-        }
-
         return post;
     }
 
