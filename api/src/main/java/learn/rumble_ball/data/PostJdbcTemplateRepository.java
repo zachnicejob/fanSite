@@ -30,21 +30,30 @@ public class PostJdbcTemplateRepository implements PostRepository {
     }
 
     @Override
+    public List<Post> findByType(int typeId){
+        final String sql = "select post_id, type_id, title, post_date, text_body, image_link "
+
+                + "from post limit 1000 "
+                  + "where type_id = ?;";
+
+        Post post = jdbcTemplate.query(sql, new PostMapper(), typeId).stream()
+                .findFirst().orElse(null);
+
+        return jdbcTemplate.query(sql, rowMapper);
+
+    }
+
+    @Override
     @Transactional
-    public Object findById(int id){
+    public Post findById(int id){
 
         final String sql = "select post_id, type_id, title, post_date, text_body, image_link "
                 + "from post limit 1000 "
                 + "where id = ?;";
 
-        Object post = jdbcTemplate.query(sql, rowMapper, id).stream()
+        Post post = jdbcTemplate.query(sql, new PostMapper(), id).stream()
                 .findFirst().orElse(null);
-
-//        if (post != null) {
-//            addAgencies(post);
-//        }
 
         return post;
     }
-
 }
