@@ -52,6 +52,8 @@ class PostJdbcTemplateRepositoryTest {
 
     @Test
     void shouldFindById() {
+        List<Post> allPosts = repository.findAll();
+        assertNotNull(repository.findById(1));
 
     }
 //   public Post(int id, int type, LocalDate postDate, String title, String textBody, String imageLink) {
