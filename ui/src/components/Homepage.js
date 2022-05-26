@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getRandomChopper } from "../services/giphyApi";
+import { getChopperById } from "../services/giphyApi";
 
 
 function Homepage() {
@@ -7,7 +7,7 @@ function Homepage() {
   const [gif, setGif] = useState(null);
 
   useEffect(() => {
-    getRandomChopper()
+    getChopperById('13Uqp5IGFpmDle')
       .then((data) => {setGif(data[0].embed_url)});
   }, [])
    
@@ -29,7 +29,7 @@ function Homepage() {
   </div>
   <div className="container mx-auto max-w-md text-center py-16">
     <iframe title="main-chopper" src={gif ? `${gif}/` : "blank"} width="480" height="270" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
-    <p><a href="https://giphy.com/gifs/one-piece-chopper-13Uqp5IGFpmDle" className="text-metal">via GIPHY</a></p>
+    <p><a href="https://giphy.com/" className="text-metal" target="_blank" rel="noopener">via GIPHY</a></p>
   </div>
   </>
  )
