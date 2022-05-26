@@ -1,4 +1,4 @@
-package data;
+package learn.rumble_ball.data;
 
 import learn.rumble_ball.data.PostRepository;
 import learn.rumble_ball.models.Post;
@@ -29,6 +29,12 @@ class PostJdbcTemplateRepositoryTest {
             jdbcTemplate.update("call set_known_good_state();");
             hasRun = true;
         }
+    }
+
+    @Test
+    void hasKnownGoodState() {
+
+        assertNotNull(repository);
     }
 
     @Test
