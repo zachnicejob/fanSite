@@ -10,7 +10,6 @@ function GeneralPost() {
     const { id } = useParams();
 
     useEffect(() => {
-        console.log(id);
         getChopperById('8gGtbSUkCCJvq')
         .then((data) => {
             setGif(data[0].embed_url)
@@ -23,7 +22,6 @@ function GeneralPost() {
         findByPostId(fetchId)
             .then(data => {
                 setPost(data);
-                console.log(data);
             })
             .catch(err => console.log(err));
     }

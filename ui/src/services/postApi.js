@@ -32,7 +32,6 @@ export async function findByType(typeId) {
 }
 
 export async function findByPostId(postId) {
-    console.log(postId);
     const response = await fetch(`${url}/post/${postId}`);
 
     if(response.status === 200 ) {
