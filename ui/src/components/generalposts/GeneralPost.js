@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getChopperById } from "../../services/giphyApi";
+import { findByPostId } from "../../services/postApi";
 
 function GeneralPost() {
     
     const [gif, setGif] = useState(null);
+    const [post, getPost] = useState([]);
     const { id } = useParams();
 
     useEffect(() => {
@@ -12,7 +14,16 @@ function GeneralPost() {
         .then((data) => {
             setGif(data[0].embed_url)
             console.log(data)});
+        fetchPost();
     }, [])
+
+    const fetchPost = () => {
+        findByPostId(id)
+            .then(data => {
+                console.log(data);
+            })
+            .catch(err => console.log(err));
+    }
 
     return(
         <>

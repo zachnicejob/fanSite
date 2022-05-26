@@ -30,3 +30,13 @@ export async function findByType(typeId) {
         return Promise.reject(['Unable to fetch posts by typeId']);
     }
 }
+
+export async function findByPostId(postId) {
+    const response = await fetch(`${url}/post/${postId}`);
+
+    if(response.status === 200 ) {
+        return await response.json();
+    } else {
+        return Promise.reject(['Unable to fetch posts by typeId']);
+    }
+}
