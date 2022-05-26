@@ -19,6 +19,8 @@ public class PostService {
         return repository.findAll();
     }
 
+    public List<Post> findByTypeId(int typeId) {return repository.findByTypeId(typeId);}
+
     public Post findById(int id) {
         return repository.findById(id);
     }
