@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -39,9 +40,15 @@ class PostJdbcTemplateRepositoryTest {
 
     @Test
     void shouldFindAllPosts() {
+        Post expected = new Post(1, 1, LocalDate.of(2022,04,25),"First Event!",
+                "This is the first event post", "http://pm1.narvii.com/6162/3b1affdff1083383b3a97256a1cf22caa1e8da8a_00.jpg");
+
         List<Post> allPosts = repository.findAll();
 
         assertNotNull(allPosts);
+        assertTrue(allPosts.size() >= 2);
+        assertTrue(allPosts.stream().anyMatch(post -> post.equals(expected)));
     }
+
 
 }

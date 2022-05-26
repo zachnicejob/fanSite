@@ -14,6 +14,17 @@ public class Post {
     private String imageLink;
     private ArrayList spoils;
 
+    public Post() {
+    }
+
+    public Post(int id, int type, LocalDate postDate, String title, String textBody, String imageLink) {
+        this.id = id;
+        this.type = type;
+        this.postDate = postDate;
+        this.title = title;
+        this.textBody = textBody;
+        this.imageLink = imageLink;
+    }
 
     public int getId() {
         return id;
@@ -76,8 +87,7 @@ public class Post {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Post post = (Post) o;
-        return id == post.getId() && type == post.getType()&& postDate == post.getPostDate()
-                && title.equals(post.title) && textBody.equals(post.textBody) && imageLink.equals(post.imageLink);
+        return id == post.id && type == post.type && postDate.equals(post.postDate) && title.equals(post.title) && Objects.equals(textBody, post.textBody) && Objects.equals(imageLink, post.imageLink);
     }
 
     @Override
@@ -89,9 +99,9 @@ public class Post {
     public String toString() {
         return "Post{" +
                 "id=" + id +
-                "type=" + type +
-                "postDate=" + postDate +
-                ", title='" + title + '\'' +
+                ", type=" + type +
+                ", postDate=" + postDate +
+                ", title=" + title +
                 ", textBody=" + textBody +
                 ", imageLink=" + imageLink +
                 '}';
