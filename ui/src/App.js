@@ -8,6 +8,7 @@ import NotFound from './components/NotFound';
 import About from './components/About';
 import ChopperBio from './components/ChopperBio';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import './components/styles.css';
 
 function App() {
@@ -42,6 +43,8 @@ function App() {
             <NotFound />
           </Route>
         </Switch>
+      <Footer />
+      
       </div>
     </div>
   );
