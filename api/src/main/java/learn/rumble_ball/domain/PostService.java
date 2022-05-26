@@ -19,7 +19,7 @@ public class PostService {
         return repository.findAll();
     }
 
-    public Object findById(int id) {
+    public Post findById(int id) {
         return repository.findById(id);
     }
 }
