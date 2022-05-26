@@ -6,7 +6,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-public class PostMapper implements RowMapper {
+public class PostMapper implements RowMapper<Post> {
 
     @Override
     public Post mapRow(ResultSet resultSet, int i) throws SQLException {
@@ -19,6 +19,8 @@ public class PostMapper implements RowMapper {
         if (resultSet.getDate("post_date") != null) {
             post.setPostDate(resultSet.getDate("post_date").toLocalDate());
         }
+        post.setTextBody(resultSet.getString("text_body"));
+        post.setImageLink(resultSet.getString("image_link"));
         return post;
     }
 }
