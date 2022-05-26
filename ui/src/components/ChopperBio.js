@@ -23,7 +23,7 @@ function ChopperBio() {
     </div>
     <div className="container mx-auto max-w-md text-center py-16">
         <iframe title="main-chopper" src={gif ? `${gif}/` : "blank"} width="480" height="270" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
-        <p><a href="https://giphy.com" className="text-metal" target="_blank" rel="noopener">via GIPHY</a></p>
+        <p><a href="https://giphy.com" className="text-metal" target="_blank" rel="noopener noreferrer">via GIPHY</a></p>
     </div>
     </>)
 }

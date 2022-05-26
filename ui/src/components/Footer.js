@@ -7,8 +7,8 @@ function Footer() {
         <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
             <div className="grid grid-flow-col gap-4">
                 <Link to="/about">About us</Link>
-                <a className="link link-hover" href="https://onepiece.fandom.com/wiki/Tony_Tony_Chopper" target="_blank" rel="noopener">More Chopper info</a> 
-                <a className="link link-hover" href="https://lmgtfy.app/?q=jobs+near+me" target="_blank" rel="noopener">Jobs</a>
+                <a className="link link-hover" href="https://onepiece.fandom.com/wiki/Tony_Tony_Chopper" target="_blank" rel="noopener noreferrer">More Chopper info</a> 
+                <a className="link link-hover" href="https://lmgtfy.app/?q=jobs+near+me" target="_blank" rel="noopener noreferrer">Jobs</a>
             </div> 
             <div>
                 <div className="grid grid-flow-col gap-4">
