@@ -22,7 +22,8 @@ public class PostController {
         return service.findAll();
     }
 
-    @GetMapping
+
+    @GetMapping("/{typeId}")
     public List<Post> findByTypeId(@PathVariable int typeId) {
         return service.findByTypeId(typeId);
     }
