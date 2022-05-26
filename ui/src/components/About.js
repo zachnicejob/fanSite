@@ -10,7 +10,7 @@ function About() {
         </div>
     </div>
     <div className="max-w-md mx-auto">
-        <p className="py-4 text-metal">We, the creators of this site made this project as an exercise in building a web application. We also happen to really like Tony Tony Chopper from One piece, so there's that.</p>
+        <p className="py-4 text-metal">We, the creators of this site, made this project as an exercise in building a web application. We also happen to really like Tony Tony Chopper from One piece, so there's that.</p>
         <p className="py-4 text-metal">You can find a bit more about us below!</p>
     </div>
     <div className="max-w-large flex flex-row p-32 gap-x-16">
@@ -39,7 +39,7 @@ function About() {
             </div>
         </div>
         <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Jared Guzman" /></figure>
+            <figure><img src={require("../images/zach-nicely.jpg")} alt="Jared Guzman" /></figure>
             <div className="card-body">
                 <h2 className="card-title">Zach Nicely</h2>
                 <p>Multi-instrumentalist hailing from smack-dab in the middle of The Big Apple, Zach is wide known for his soothing online streaming voice and for being wicked good at math. We should all be a bit more like Zach.</p>
