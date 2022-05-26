@@ -50,5 +50,17 @@ class PostJdbcTemplateRepositoryTest {
         assertTrue(allPosts.stream().anyMatch(post -> post.equals(expected)));
     }
 
+    @Test
+    void shouldFindById() {
+
+    }
+//   public Post(int id, int type, LocalDate postDate, String title, String textBody, String imageLink) {
+//        this.id = id;
+//        this.type = type;
+//        this.postDate = postDate;
+//        this.title = title;
+//        this.textBody = textBody;
+//        this.imageLink = imageLink;
+//    }
 
 }
