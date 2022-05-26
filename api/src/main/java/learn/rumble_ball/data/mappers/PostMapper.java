@@ -19,6 +19,8 @@ public class PostMapper implements RowMapper<Post> {
         if (resultSet.getDate("post_date") != null) {
             post.setPostDate(resultSet.getDate("post_date").toLocalDate());
         }
+        post.setTextBody(resultSet.getString("text_body"));
+        post.setImageLink(resultSet.getString("image_link"));
         return post;
     }
 }

@@ -9,7 +9,9 @@ function GeneralPost() {
 
     useEffect(() => {
         getChopperById('8gGtbSUkCCJvq')
-        .then((data) => {setGif(data[0].embed_url)});
+        .then((data) => {
+            setGif(data[0].embed_url)
+            console.log(data)});
     }, [])
 
     return(

@@ -7,5 +7,8 @@ import java.util.List;
 public interface PostRepository {
     List<Post> findAll();
 
+    List<Post> findByType(int typeId);
+
     Post findById(int id);
+
 }
