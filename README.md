@@ -1,14 +1,39 @@
 ## High Level Project Definition
 
+We are structuring the data in our project similar to how a blog would. Each page that the admin wants to save is stored as a 'post' object with some useful tags for the front end to use to display content correctly - 'id' and 'type' in specific. The ui uses get requests from the backend to populate the majority of the content for the fansite and api requests to the giphycat api to get gifs to make pages more visually interesting.
+
 ### Back-end
 Data strategies: 1, 2, & 4
 
+#### Data strategy 1:
+* Static: embed content/data directly into a component.
+
+Content for these pages has yet to be defined, and will be made when we get the structure of the site set up.
+
+- Homepage
+- General (choose between general posts)
+- Events (choose between stories)
+- About the creators (each of us will make our own little section)
+
+#### Data Strategy 2:
+* Public APIs: pull from a public api in some fasion
+
+We are going to try to use the giphycat api to pull gifs onto our website. How exactly this would happen is yet to be determined, and will be a later step in the project.
+
+
 #### Data strategy 4:
-A database-backed Java, Spring Boot/MVC API
+* A database-backed Java, Spring Boot/MVC API
 
 #### SQL structure:
-Types: [General, Events, Facts,...]
+```
+Types: [
+	General, 
+	Events, 
+	Facts,...
+	]
+```
 
+```
 Posts: {
 	Post_Id: 1,
 	Type_Id: 2 -> Story or blog post or whatever,
@@ -22,9 +47,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ante nisi,
 Spoils: [123, 246, 369]
 
 }
+```
 
-Endpoints: 
+Endpoints:
 
+```
 /api/posts -> findAll
 /api/posts/events -> findByType [{post},{post},{post}]
 /api/posts/general -> 
@@ -33,27 +60,38 @@ Endpoints:
 /api/events
 
 /api/facts
+```
+
+
+
+
 
 
 ### Front-end
 
 Tailwind css
+- mamba ui or daisy ui
+React
 
+```
 - Homepage
 - Facts
 - Events
--   Event 1
--   Event 2
--   Etc…
-- General
--   Blog 1
--   Blog 2
--   Blog 3
+  - Event 1
+  - Event 2
+  - Etc…
+- General (all blog posts?)
+  - Blog 1
+  - Blog 2
+  - Blog 3
 - About the creators
+```
+
+![UI-wireframe](./ui-wireframe.png)
 
 
 
-## Goals
+### Goals
 
 - Coordinate tasks across a team.
 - Practice using Git with a team.
