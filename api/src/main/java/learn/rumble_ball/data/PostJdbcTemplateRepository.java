@@ -41,7 +41,7 @@ public class PostJdbcTemplateRepository implements PostRepository {
     public Post findById(int id){
 
         final String sql = "select post_id, type_id, title, post_date, text_body, image_link "
-                + "from post where id = ? limit 1000;";
+                + "from post where post_id = ? limit 1000;";
 
         Post post = jdbcTemplate.query(sql, rowMapper, id).stream()
                 .findFirst().orElse(null);

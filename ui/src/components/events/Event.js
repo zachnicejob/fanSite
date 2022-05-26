@@ -1,23 +1,39 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getChopperById } from "../../services/giphyApi";
+import { findByPostId } from "../../services/postApi";
 
 function Event() {
 
     const [gif, setGif] = useState(null);
+    const [post, setPost] = useState([]);
     const { id } = useParams();
 
     useEffect(() => {
-        getChopperById('yXnI50SUk9HIQ')
-        .then((data) => {setGif(data[0].embed_url)});
+        console.log(id);
+        getChopperById('8gGtbSUkCCJvq')
+        .then((data) => {
+            setGif(data[0].embed_url)
+        });
+
+        fetchPost(id);
     }, [])
+
+    function fetchPost(fetchId) {
+        findByPostId(fetchId)
+            .then(data => {
+                setPost(data);
+                console.log(data);
+            })
+            .catch(err => console.log(err));
+    }
 
 return(
     <>
         <div className="hero min-h-[50%] py-16">
             <div className="hero-content text-center">
             <div className="max-w-md">
-                <h1 className="text-5xl font-bold text-metal">A single Event</h1>
+            <h1 className="text-5xl font-bold text-metal">{post.title}</h1>
                 <p className="text-metal">ID: {id}</p>
             </div>
             </div>
@@ -26,16 +42,16 @@ return(
             <p className="py-4 text-metal text-center"><i>SPOILS: EPISODES 156, 299, 505</i></p>
         </div>
         <div className="container mx-auto max-w-md text-center py-16">
-            <iframe title="main-chopper" src={gif ? `${gif}/` : "blank"} width="480" height="270" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
+            <iframe title="main-chopper" src={gif ? `${gif}/` : `${id}`} width="480" height="270" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
             <p><a href="https://giphy.com" className="text-metal" target="_blank" rel="noopener noreferrer">via GIPHY</a></p>
         </div>
         <div className="container mx-auto max-w-lg py-8 text-justify">
         <p className="py-4 text-metal">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel quam non urna viverra vestibulum eu a ligula. Quisque nec interdum eros. Suspendisse consequat enim et risus pellentesque condimentum. Nulla massa nunc, porttitor sit amet neque et, accumsan porttitor tellus. Pellentesque tincidunt lacus lorem, a gravida nulla faucibus eu. Fusce vulputate eget dolor eget tempus. Aenean sollicitudin dui id risus cursus posuere. Aenean dapibus, metus at pellentesque malesuada, erat nisi elementum massa, at tempus tellus augue in massa. Proin vitae iaculis purus. Duis ultricies augue quis posuere tempor. Nulla pretium augue turpis, ac porttitor nisl pharetra sit amet. Donec venenatis massa dui, vel finibus massa tempor quis.
+            {post.textBody}
         </p>
-        <p className="py-4 text-metal">
-            Praesent vulputate vitae sem nec convallis. Vivamus aliquet quam nisl, id varius erat rutrum sed. Mauris ultricies malesuada sem a cursus. Cras ac vehicula nunc, sit amet feugiat dolor. Ut dictum vel sem pellentesque rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum, sapien venenatis vehicula sollicitudin, odio eros gravida felis, non efficitur dui felis in dui. Proin vitae mollis ante, vel lobortis sem. Praesent commodo, nisi eget bibendum commodo, sapien massa ultricies leo, eu auctor libero lacus non ligula. Curabitur pharetra imperdiet ipsum, non semper diam facilisis quis. Praesent laoreet ligula enim, in tristique orci facilisis condimentum. In non auctor massa. Aenean vulputate enim id nibh eleifend, eu bibendum libero dignissim.
-        </p>
+        </div>
+        <div className="container mx-auto max-w-md text-center py-16">
+            <img src={post.imageLink} />
         </div>
         </>
 )
