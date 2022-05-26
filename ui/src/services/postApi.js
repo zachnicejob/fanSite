@@ -22,7 +22,7 @@ export async function findAllPosts() {
 }
 
 export async function findByType(typeId) {
-    const response = await fetch(`${url}/${typeId}`);
+    const response = await fetch(`${url}/post/type/${typeId}`);
 
     if(response.status === 200 ) {
         return await response.json();
