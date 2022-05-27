@@ -10,9 +10,9 @@ function Event() {
     const { id } = useParams();
 
     useEffect(() => {
-        console.log(id);
-        getChopperById('8gGtbSUkCCJvq')
+        getChopperById('UbQQK3SUZxCQ8')
         .then((data) => {
+            console.log(data);
             setGif(data[0].embed_url)
         });
 
@@ -23,7 +23,6 @@ function Event() {
         findByPostId(fetchId)
             .then(data => {
                 setPost(data);
-                console.log(data);
             })
             .catch(err => console.log(err));
     }
@@ -46,11 +45,11 @@ return(
             <p><a href="https://giphy.com" className="text-metal" target="_blank" rel="noopener noreferrer">via GIPHY</a></p>
         </div>
         <div className="container mx-auto max-w-lg py-8 text-justify">
-        <p className="py-4 text-metal">
-            {post.textBody}
-        </p>
+            <p className="py-4 text-metal">
+                {post.textBody}
+            </p>
         </div>
-        <div className="container mx-auto max-w-md text-center py-16">
+        <div className="container mx-auto max-w-md text-center pb-32">
             <img src={post.imageLink} />
         </div>
         </>
