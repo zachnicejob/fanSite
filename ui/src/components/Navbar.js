@@ -10,10 +10,10 @@ function Navbar() {
             <div className="flex-none mr-4">
                 <ul className="menu menu-horizontal p-2">
                     <li>
-                        <Link to="/events" className="btn btn-ghost">Events</Link>
+                        <Link to="/chopperBio" className="btn btn-ghost">Chopper's Biography</Link>
                     </li>
                     <li>
-                        <Link to="/chopperBio" className="btn btn-ghost">Chopper's Biography</Link>
+                        <Link to="/events" className="btn btn-ghost">Events</Link>
                     </li>
                     <li>
                         <Link to="/generalPosts" className="btn btn-ghost">General Posts</Link>

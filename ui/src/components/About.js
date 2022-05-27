@@ -13,7 +13,7 @@ function About() {
         <p className="py-4 text-metal">We, the creators of this site, made this project as an exercise in building a web application. We also happen to really like Tony Tony Chopper from One piece, so there's that.</p>
         <p className="py-4 text-metal">You can find a bit more about us below!</p>
     </div>
-    <div className="max-w-large flex flex-row p-32 gap-x-16">
+    <div className="max-w-large flex flex-row justify-center p-32 gap-x-16">
         <div className="card w-96 bg-base-100 shadow-xl">
             <figure><img src={require("../images/ege-kula.jpg")} alt="Ege Kula" /></figure>
             <div className="card-body">
