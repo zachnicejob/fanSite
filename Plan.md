@@ -7,47 +7,47 @@
 
 * [x] Resources folder
 
-* [ ] Create Models
+* [x] Create Models
     * [x] Post
-    * [ ] Type (enum) (1 hour)
+    * [x] Type (enum) (1 hour)
 
-* [ ] Data
-    * [ ] Post Mapper (.2 hour)
-    * [ ] Post JDBC (1 hour)
+* [x] Data
+    * [x] Post Mapper (.2 hour)
+    * [x] Post JDBC (1 hour)
         * findAll
-    * [ ] Create SQL Schema ( .5 hour)
-    * [ ] Create and Run Tests (2 hour)
+    * [x] Create SQL Schema ( .5 hour)
+    * [x] Create and Run Tests (2 hour)
 
-* [ ] Domain
-    * [ ] PostService (1 hour)
+* [x] Domain
+    * [x] PostService (1 hour)
         * validations, findAll
-    * [ ] Test PostService (1 hour)
-    * [ ] Result & ResultType (.5 hour)
+    * [x] Test PostService (1 hour)
+    * [x] Result & ResultType (.5 hour)
 
 
-* [ ] Controllers (2 hours)
-    * [ ] PostController
+* [x] Controllers (2 hours)
+    * [x] PostController
 
 ### Frontend (9 hours)
 
 * [x] Wireframe
 
-* [ ] Components (1.5 hour)
-    * [ ] NavBar
-    * [ ] Errors
-    * [ ] General
-    * [ ] Home
-    * [ ] Events
-    * [ ] Team
-* [ ] Services
-    * [ ] api (1 hour)
-* [ ] App, Index (1 hour)
+* [x] Components (1.5 hour)
+    * [x] NavBar
+    * [x] Errors
+    * [x] General
+    * [x] Home
+    * [x] Events
+    * [x] Team
+* [x] Services
+    * [x] api (1 hour)
+* [x] App, Index (1 hour)
 * [x] Add Tailwind
-    * [ ] Daisy or Mamba UI (.5 hour)
+    * [x] Daisy or Mamba UI (.5 hour)
 
-* [ ] GfyCat (2 hours)
+* [x] GfyCat (2 hours)
 
-* [ ] Run Test, Adjustments (3 hours)
+* [x] Run Test, Adjustments (3 hours)
 
 
 ## Phase 2: Add Functionality (6 hours)
