@@ -12,7 +12,6 @@ function Event() {
     useEffect(() => {
         getChopperById('UbQQK3SUZxCQ8')
         .then((data) => {
-            console.log(data);
             setGif(data[0].embed_url)
         });
 

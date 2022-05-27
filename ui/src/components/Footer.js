@@ -8,7 +8,7 @@ function Footer() {
             <div className="grid grid-flow-col gap-4">
                 <Link to="/about">About us</Link>
                 <a className="link link-hover" href="https://onepiece.fandom.com/wiki/Tony_Tony_Chopper" target="_blank" rel="noopener noreferrer">More Chopper info</a> 
-                <a className="link link-hover" href="https://lmgtfy.app/?q=jobs+near+me" target="_blank" rel="noopener noreferrer">Jobs</a>
+                <a className="link link-hover" href="https://letmegooglethat.com/?q=jobs+near+me" target="_blank" rel="noopener noreferrer">Jobs</a>
             </div> 
             <div>
                 <div className="grid grid-flow-col gap-4">
