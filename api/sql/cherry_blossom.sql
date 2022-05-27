@@ -25,10 +25,11 @@ insert into `type` (`type`) values
 
 insert into post (type_id, title, post_date, text_body, image_link)
 	values
-    (1, 'First Event!', '2022-04-25', 'This is the first event post', 'http://pm1.narvii.com/6162/3b1affdff1083383b3a97256a1cf22caa1e8da8a_00.jpg'),
+    (1, 'First Encounter!', '2022-04-25', 'A young reindeer on a snowcapped mountaintop in the middle of a country under a white blanket trods up to a red stain in the snow. Our captain Luffy who had worked his nails to the bone scaling the mountain and was lying exhausted in the snow. He hoped to find a doctor at the top to tend to his crewmates Nami and Sanji who were sick and injured respectively. Chopper and his teacher Kureha were doctors so they tended to all three of them while Chopper couldnt help but admire Luffy for his readyness to risk his life for his friends.', 'https://i.ytimg.com/vi/WUyxUCx9oxs/maxresdefault.jpg'),
     (1, 'Second Event!', '2022-04-25', 'Just in case...', 'https://animedrawn.com/wp-content/uploads/2020/05/Chopper-683x1024.png'),
     (2, 'First Post!', '2022-04-25', 'An explanation', 'https://static.wikia.nocookie.net/onepiece/images/e/e6/Tony_Tony_Chopper_Anime_Pre_Timeskip_Infobox.png/revision/latest?cb=20160207143020'),
-    (2, 'And another post', '2022-04-25', 'I hate images', null);
+    (2, 'And another post', '2022-04-25', 'I hate images', null),
+    (2, 'And another post', '2022-04-25', 'I ', 'https://static.wikia.nocookie.net/onepiece/images/a/af/Tony_Tony_Chopper_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20130428202154');
 
     
 -- auth
