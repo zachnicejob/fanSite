@@ -7,7 +7,7 @@
 
 * [x] Resources folder
 
-* [ ] Create Models
+* [x] Create Models
     * [x] Post
     * [x] Type (enum) (1 hour)
 
